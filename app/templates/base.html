@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<title> {% block title %} - Portafolio {% endblock %} </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Rufina:wght@400;700&display=swap" rel="stylesheet"><body>
+  <section>
+    <header>
+      <div class="logo">FRANCO ARTICO</div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('portfolio.index') }}">Inicio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %} {% endblock %}
+  </section>
+  <div class="footer">
+    <div class="center full-width">
+      <div class="row">
+        <h3>Contactáme</h3>
+      </div>
+    </div>
+    <div class="center full-width">
+      <div class="row">
+        <p>Estas son mis redes</p>
+      </div>
+    </div>
+    <div class="center full-width social-links">
+      <div class="row">
+        <a target="_blank" href="https://x.com/franco_artico" ><img class="social" width=30 src="{{url_for('static', filename='twitter.png')}}"></a>
+        <a target="_blank" href="https://www.instagram.com/franquito100_/"><img class="social" width=30 src="{{url_for('static', filename='facebook.png')}}"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/franco-artico-b8b585215/"><img class="social" width=30 src="{{url_for('static', filename='linkedin.png')}}"></a>
+      </div>
+    </div>
+    <div class="made-width">
+      <div class="row">
+        <p class="made-with">Realizado por Franco Artico 🧉</p>
+      </div>
+    </div>
+  </div>
+</body>
